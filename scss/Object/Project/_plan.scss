@@ -1,0 +1,344 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.plan {
+    padding-bottom: 16.3rem;
+    @include sp {
+        padding-bottom: 12.6rem;
+    }
+}
+
+// =========================
+// PricingTitle
+// =========================
+.plan-pricing__system {
+    padding-block: 6.6rem 5.7rem;
+    @include sp {
+        padding-block: 4.6rem 3.8rem;
+    }
+}
+.plan-pricing-system__heading {
+    margin-bottom: 4rem;
+    @include sp {
+        margin-bottom: 3.9rem;
+    }
+}
+.plan-pricing-system__summary {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    column-gap: 7.9rem;
+    margin-bottom: 4.8rem;
+    @include sp {
+        display: block;
+        margin-bottom: 4.6rem;
+    }
+}
+.plan-pricing-system__membership,
+.plan-pricing-system__monthly {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-red;
+    width: 21rem;
+    height: 6rem;
+    @include sp {
+        margin: 0 auto;
+    }
+    p {
+        font-size: 2rem;
+        color: $color-white;
+        border: 1px solid $color-red;
+    }
+}
+.plan-pricing-system__membership {
+    @include sp {
+        margin-bottom: 5.8rem;
+    }
+    &::before {
+        content: "";
+        width: 1.9rem;
+        height: 0.3rem;
+        background-color: $color-black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &::after {
+        content: "";
+        width: 0.3rem;
+        height: 1.9rem;
+        background-color: $color-black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.plan-pricing-system__text {
+    p {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+        }
+    }
+}
+// =========================
+// PricingStructure
+// =========================
+.plan-pricing-structure__heading {
+    margin-bottom: 5rem;
+    @include sp {
+        margin-bottom: .5rem;
+    }
+}
+.plan-pricing-structure__contents {
+    @include sp {
+        display: block;
+        overflow-x: auto;
+        padding-bottom: 1.7rem;
+        &::-webkit-scrollbar {
+            height: 2.5rem;
+            background-color: $color-gray02;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-gray04;
+            cursor: pointer;
+        }
+    }
+}
+.plan-pricing-structure__title {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 8rem;
+    @media screen and (min-width: 717px) and (max-width: 767px) {
+        grid-template-columns: repeat(4, 1fr);
+        height: 10rem;
+    }
+    @media screen and (max-width: 716px) {
+        grid-template-columns: repeat(4, 16.9rem);
+        height: 10rem;
+    }
+    p {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        @include sp {
+
+        }
+    }
+}
+.plan-pricing-structure__basic {
+    color: $color-white;
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+    background-color: $color-black;
+    @include sp {
+        p {
+            width: 10rem;
+        }
+    }
+}
+.plan-pricing-structure__standard {
+    display: grid;
+    place-items: center;
+    color: $color-white;
+    background-color: $color-red;
+    @include sp {
+        p {
+            width: 12rem;
+        } 
+    }
+}
+.plan-pricing-structure__premium {
+    color: $color-white;
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+    background-color: $color-black;
+    @include sp {
+        p {
+            width: 10rem;
+        }
+    }
+}
+.plan-pricing-structure__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 8.5rem);
+    @media screen and (min-width: 717px) and (max-width: 767px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 716px) {
+        grid-template-columns: repeat(4, 16.9rem);
+    }
+}
+.plan-pricing-structure__term {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    border-top: .5px solid $color-black;
+    @include sp {
+        padding-left: 1rem;
+    }
+    p {
+        font-size: 1.7rem;
+        line-height: lh(30, 17);
+        font-weight: bold;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+        }
+    }
+}
+.plan-pricing-structure__value {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: .5px solid $color-black;
+    border-left: .5px solid $color-black;
+    p {
+        font-size: 2.2rem;
+        line-height: lh(33, 22);
+        font-weight: bold;
+    }
+}
+.plan-pricing-structure__label {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    @include sp {
+        padding-left: 1rem;
+    }
+    p {
+        font-size: 1.7rem;
+        line-height: lh(25, 17);
+        font-weight: 500;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(25, 16);
+        }
+    }
+}
+.plan-pricing-structure__details {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: .5px solid $color-black;
+    p {
+        font-size: 1.7rem;
+        line-height: lh(25, 17);
+        font-weight: 500;
+        margin-top: 2.2rem;
+    }
+}
+.plan-pricing-structure__notes {
+    font-size: 1.7rem;
+    line-height: lh(25, 17);
+    font-weight: 500;
+    margin-top: 2.8rem;
+    @include sp {
+        font-size: 1.6rem;
+        line-height: lh(30, 16);
+        margin-top: 1.5rem;
+    }
+}
+.black-line {
+    border-bottom: .5px solid $color-black;
+}
+.color-red {
+    color: $color-red;
+}
+.bg-color-gray {
+    background-color: $color-gray02;
+}
+.grid-item {
+    font-size: 2rem;
+}
+.recommended {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.sunspots-black {
+    position: relative;
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-black;
+        border-radius: 50%;
+        position: absolute;
+        top: 1.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        @include sp {
+            top: 2rem;
+        }
+    }
+}
+.sunspot-black {
+    position: relative;
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-black;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.sunspots-red {
+    position: relative;
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-red;
+        border-radius: 50%;
+        position: absolute;
+        top: 1.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        @include sp {
+            top: 2rem;
+        }
+    }
+}
+.sunspot-red {
+    position: relative;
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-red;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.gray-Line {
+    position: relative;
+    &::before {
+        content: "";
+        width: 3rem;
+        height: .1rem;
+        background-color: $color-gray03;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

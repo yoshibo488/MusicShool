@@ -1,0 +1,107 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.top-process {
+    padding-block: 5.4rem 10.5rem;
+    @include sp {
+        padding-block: 4.6rem 5.7rem;
+    }
+}
+.top-process__heading {
+    text-align: center;
+    margin-bottom: 5.3rem;
+    @include sp {
+        margin-bottom: 3.6rem;
+    }
+}
+
+.top-process__contents {
+    display: flex;
+    justify-content: flex-end;
+    @include sp {
+        justify-content: flex-start;
+        margin-left: 4.8rem;
+    }
+}
+.top-process__items {
+    position: relative;
+    &::before {
+        content: "";
+        width: 3px;
+        height: 97%;
+        background-color: $color-red;
+        position: absolute;
+        top: 2.5rem;
+        left: -7.2rem;
+        @include sp {
+            height: 95%;
+            left: -3.2rem;
+        }
+    }
+}
+.top-process__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 3.8rem;
+    @include sp {
+        display: block;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 5.8rem;
+        @include sp {
+            margin-bottom: 3.6rem;
+        }
+    }
+    &::before {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        background-color: $color-red;
+        border-radius: 50%;
+        position: absolute;
+        top: 1.2rem;
+        left: -8rem;
+        @include sp {
+            top: 0.4rem;
+            left: -4rem;
+        }
+    }
+}
+.top-process-card__heading {
+    flex: 1;
+    margin-left: -1rem;
+    margin-bottom: 0.9rem;
+    color: $color-red;
+    font-size: 2.2rem;
+    line-height: lh(33, 22);
+    font-weight: bold;
+    @include sp {
+        margin-left: 0;
+    }
+}
+.top-process-card__text {
+    width: 56.7rem;
+    font-size: 1.8rem;
+    line-height: lh(30, 18);
+    font-weight: 500;
+    @include sp {
+        font-size: 1.6rem;
+        line-height: lh(30, 16);
+        width: 100%;
+    }
+}
+.top-process__triangle {
+    &::before {
+        position: absolute;
+        bottom: -1.7rem;
+        left: -8.8rem;
+        @include sp {
+            left: -4.75rem;
+            bottom: 0.75%;
+        }
+        @media screen and (min-width: 500px) and (max-width: 767px) {
+            bottom: -0.1%;
+        }
+    }
+}

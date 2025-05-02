@@ -1,0 +1,23 @@
+// 変数
+$font-family: YuGothic,'Yu Gothic',"Noto sans JP",sans-serif;
+$color-white: #FFFFFF;
+$color-red: #CB0000;
+$color-black: #000000;
+$color-gray: #E8E8E8;
+$color-gray02: #50505026;
+$color-gray03: #707070;
+$color-gray04: #50505040;
+$color-gray05: #E5E5E5;
+
+// 関数
+@function lh($height, $pixel) {
+    @return calc($height / $pixel);
+}
+
+@function vw($pixel, $width: 1080px) {
+    @return calc($pixel / $width * 100vw);
+}
+
+@function mvw($pixel) {
+    @return min(calc($pixel / 1080 * 100vw), $pixel * 1px)
+}

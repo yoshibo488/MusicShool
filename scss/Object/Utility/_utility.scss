@@ -1,0 +1,18 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.result-list__special {
+    margin-bottom: 2rem!important;
+}
+
+.u-col-two {
+    @include sp {
+        padding-block: 0.46rem;
+    }
+}
+.u-col-three {
+    @include sp {
+        line-height: 1.43!important;
+        padding-block: 0.5rem;
+    }
+}

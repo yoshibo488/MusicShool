@@ -1,0 +1,183 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+// =========================
+// ディスプレイ　表示・非表示
+// =========================
+.c-pc-none {
+    @include pc {
+        display: none;
+    }
+}
+.c-sp-none {
+    @include sp {
+        display: none;
+    }
+}
+
+// =========================
+// h3
+// =========================
+.c-index-heading {
+    font-size: 3rem;
+    line-height: lh(50, 30);
+    font-weight: bold;
+    @include sp {
+        font-size: 2.5rem;
+        line-height: lh(40, 25);
+        font-weight: bold;
+    }
+}
+.secondary__heading {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: lh(37.5, 25);
+    font-weight: bold;
+    @include sp {
+        font-size: 2.5rem;
+        line-height: lh(40, 25);
+        font-weight: bold;
+    }
+}
+
+// =========================
+// ボタン
+// =========================
+.c-btn {
+    a {
+        display: block;
+        background-color: $color-red;
+        color: $color-white;
+        font-weight: bold;
+        border: 1px solid $color-red;
+        transition: .3s;
+        &:hover {
+            background-color: $color-white;
+            color: $color-red;
+        }
+    }
+}
+// =========================
+// ハンバーガーメニュー
+// =========================
+.c-hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7.1rem;
+    height: 5rem;
+    background: $color-red;
+    z-index: 9999;
+}
+.c-hamburger-line,
+.c-hamburger-line::before,
+.c-hamburger-line::after {
+    position: absolute;
+    width: 3.272rem;
+    height: .4rem;
+    background: $color-white;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+.c-hamburger-line::before,
+.c-hamburger-line::after {
+    content: "";
+    left: 0;
+}
+.c-hamburger-line {
+    top: 2.3rem;
+    left: 2rem;
+}
+.c-hamburger-line::before {
+    top: -1.2rem;
+}
+.c-hamburger-line::after {
+    top: 1.2rem;
+}
+.c-hamburger.active .c-hamburger-line {
+    background-color: transparent;
+}
+.c-hamburger.active .c-hamburger-line::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0;
+}
+.c-hamburger.active .c-hamburger-line::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 0;
+}
+.c-header-menu {
+    position: fixed;
+    width: 30rem;
+    height: 17.4rem;
+    top: 5rem;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 9999;
+}
+.c-header-menu ul {
+    margin: 0;
+    background-color: $color-red;
+    list-style: none;
+    font-size: 2.4rem;
+    color: $color-white;
+}
+.c-header-menu ul li {
+    a {
+        display: block;
+        font-size: 1.8rem;
+        line-height: lh(33, 18);
+        font-weight: bold;
+        padding: 1.5rem 0 1rem 2rem;
+        transition: .3s;
+        &:hover {
+        background-color: $color-black;
+        }
+    }
+}
+
+// =========================
+// triangle
+// =========================
+.c-triangle {
+    &::before {
+        content: "";
+        width: 3.4rem;
+        height: 3.4rem;
+        background-color: $color-red;
+        clip-path: polygon(0 50%, 8% 41%, 50% 84%, 92% 41%, 100% 50%, 50% 100%);
+    }
+}
+
+// =========================
+// bg-color
+// =========================
+.c-bg-color {
+    background-color: $color-red;
+    color: $color-white;
+}
+
+// =========================
+// タグ
+// =========================
+.c-post__tag {
+    display: grid;
+    place-items: center;
+    background-color: $color-red;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-inline: 1rem;
+    span {
+        display: block;
+        color: $color-white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

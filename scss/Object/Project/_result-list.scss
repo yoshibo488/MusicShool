@@ -1,0 +1,78 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.result-list {
+    padding-bottom: 15rem;
+    @include sp {
+        padding-bottom: 13.7rem;
+    }
+}
+
+.result-list__sec {
+    padding-top: 6.6rem;
+    @include sp {
+        padding-top: 4.6rem;
+    }
+}
+.result-list__heading {
+    margin-bottom: 4rem;
+    @include sp {
+        margin-bottom: 4.9rem;
+    }
+}
+.result-list__contents {
+    display: grid;
+    column-gap: 10.6rem;
+    row-gap: 6.1rem;
+    grid-template-columns: repeat(2, 1fr);
+    @include sp {
+        display: block;
+    }
+}
+.result-list__link {
+    display: block;
+    transition: .3s;
+    &:not(:last-of-type) {
+        @include sp {
+            margin-bottom: 4.1rem;
+        }
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.result-list__thumbnail {
+    position: relative;
+    margin-bottom: 3rem;
+    @include sp {
+        margin-bottom: 2rem;
+    }
+}
+
+.result-list__image {
+    overflow: hidden;
+    img {
+        aspect-ratio: 129 / 91;
+        object-fit: cover;
+        @include sp {
+            aspect-ratio: 335 / 236;
+        }
+    }
+}
+.result-list__tag {
+    min-width: 10rem;
+}
+.result-list__title {
+    h3 {
+        font-size: 2rem;
+        line-height: lh(25, 20);
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    p {
+        text-align: right;
+        font-size: 1.8rem;
+        line-height: lh(32, 18);
+        font-weight: 500;
+    }
+}

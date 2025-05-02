@@ -1,0 +1,135 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.search-page {
+    padding-bottom: 15rem;
+    @include sp {
+        padding-bottom: 13rem;
+    }
+}
+
+.search__sec {
+    padding-top: 6.6rem;
+    @include sp {
+        padding-top: 3.5rem;
+    }
+}
+.search__target {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.2rem;
+    h1,
+    p {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+    }
+    h1 {
+        span {
+            font-weight: bold;
+        }
+    }
+}
+.search__contents {
+    margin-bottom: 6.8rem;
+    @include sp {
+        margin-bottom: 6.1rem;
+    }
+}
+
+.search__link {
+    display: flex;
+    column-gap: 5rem;
+    transition: .3s;
+    &:not(:last-of-type) {
+        margin-bottom: 7rem;
+        @include sp {
+            margin-bottom: 3.9rem;
+        }
+    }
+    &:hover {
+        opacity: 0.6;
+    }
+    @include sp {
+        display: block;
+    }
+}
+.search__thumbnail {
+    position: relative;
+    width: 26rem;
+    @include sp {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+.search__image {
+    overflow: hidden;
+    img {
+        aspect-ratio: 65 / 46;
+        object-fit: cover;
+        @include sp {
+            aspect-ratio: 67 / 40;
+        }
+    }
+}
+.search__tag {
+    min-width: 8rem;
+    @include sp {
+        min-width: 9rem;
+    }
+}
+.search__post {
+    flex: 1;
+    p:last-child {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+            font-weight: 500;
+        }
+    }
+}
+.search__heading {
+    font-size: 2rem;
+    line-height: lh(25, 20);
+    font-weight: bold;
+    @include sp {
+        font-size: 2rem;
+        line-height: lh(30, 20);
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+    }
+}
+.search__time {
+    font-size: 1.7rem;
+    line-height: lh(30, 17);
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+    @include sp {
+        margin-bottom: 0.8rem;
+        text-align: right;
+    }
+}
+
+.search-error__text {
+    font-size: 2.3rem;
+    color: $color-red;
+    text-align: center;
+    margin-bottom: 5rem;
+    @include sp {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+}
+.search-error__btn {
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto;
+    a {
+        padding: 1rem 2rem;
+        display: block;
+        font-size: 1.8rem;
+    }
+}

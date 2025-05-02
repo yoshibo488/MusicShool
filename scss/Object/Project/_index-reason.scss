@@ -1,0 +1,59 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.top-reason {
+    padding-block: 6.4rem 2rem;
+    @include sp {
+        padding-block: 4.9rem 0;
+    }
+}
+.top-reason__heading {
+    text-align: center;
+    margin-bottom: 2.8rem;
+    @include sp {
+        margin-bottom: 3.6rem;
+    }
+}
+.top-reason__item {
+    display: flex;
+    margin-bottom: 5rem;
+    @include sp {
+        display: block;
+        margin-bottom: 3.9rem;
+    }
+}
+.reason-card__image {
+    width: 35rem;
+    @include sp {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+.reason-card__text {
+    flex: 1;
+    p {
+        font-size: 1.8rem;
+        line-height: lh(33, 18);
+        font-weight: 500;
+        padding-left: 5rem;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+            padding-left: 0;
+        }
+    }
+}
+.reason-card__heading {
+    font-size: 2.2rem;
+    line-height: lh(33, 22);
+    font-weight: bold;
+    padding: .2rem 0 1.1rem 5rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 2px solid $color-red;
+    @include sp {
+        font-size: 2rem;
+        line-height: lh(30, 20);
+        padding: 0 0 .8rem 0;
+        margin-bottom: 1.7rem;
+    }
+}

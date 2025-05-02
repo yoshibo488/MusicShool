@@ -1,0 +1,99 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.blog-list {
+    padding-bottom: 15rem;
+    @include sp {
+        padding-bottom: 13.7rem;
+    }
+}
+
+.blog-list__sec {
+    margin-top: 6.7rem;
+    @include sp {
+        margin-top: 4.6rem;
+    }
+}
+.blog-list__heading {
+    margin-bottom: 4rem;
+    @include sp {
+        margin-bottom: 3.9rem;
+    }
+}
+.blog-list__item {
+    display: flex;
+    column-gap: 5rem;
+    margin-bottom: 7rem;
+    transition: .3s;
+    &:hover {
+        opacity: 0.6;
+    }
+    @include sp {
+        display: block;
+    }
+    &:not(:last-of-type) {
+        @include sp {
+            margin-bottom: 3.9rem;
+        }
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+.blog-list__thumbnail {
+    position: relative;
+    width: 26rem;
+    @include sp {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+.blog-list__image {
+    overflow: hidden;
+    img {
+        aspect-ratio: 65 / 46;
+        object-fit: cover;
+        @include sp {
+            aspect-ratio: 67 / 40;
+        }
+    }
+}
+.blog-list__tag {
+    min-width: 8rem;
+    @include sp {
+        min-width: 9rem;
+    }
+}
+.blog-list__content {
+    flex: 1;
+    p:last-child {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+            font-weight: 500;
+        }
+    }
+}
+.blog-list__title {
+    font-size: 2rem!important;
+    line-height: lh(25, 20)!important;
+    font-weight: bold!important;
+    @include sp {
+        line-height: lh(30, 20)!important;
+        margin-bottom: 0.6rem!important;
+    }
+}
+.blog-list__date {
+    font-size: 1.7rem;
+    line-height: lh(30, 17);
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+    @include sp {
+        margin-bottom: 0.8rem;
+        text-align: right;
+    }
+}

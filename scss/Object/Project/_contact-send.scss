@@ -1,0 +1,49 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.contact-send__sec {
+    padding-block: 6.6rem 9rem;
+    @include sp {
+        padding-block: 4.6rem 5rem;
+    }
+}
+.contact-send__text {
+    @include sp {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 4.05rem;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+            margin-bottom: 4rem;
+        }
+        @media screen and (max-width: 438px) {
+            text-align: left;
+        }
+    }
+}
+.contact-send__btn {
+    width: 25rem;
+    margin: 0 auto;
+    @include sp {
+        width: 33.5rem;
+    }
+    a {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: lh(33, 25);
+        font-weight: bold;
+        padding-block: 0.75rem;
+        @include sp {
+            font-size: 2rem;
+            line-height: lh(26, 20);
+            padding-block: 1.1rem;
+        }
+    }
+}

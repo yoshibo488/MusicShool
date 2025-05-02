@@ -1,0 +1,126 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.top-faq {
+    padding-bottom: 7.5rem;
+    @include sp {
+        padding-bottom: 4.75rem;
+    }
+}
+
+.top-faq__heading {
+    text-align: center;
+    margin-bottom: 3.7rem;
+
+    @include sp {
+        margin-bottom: 3.9rem;
+    }
+}
+
+.top-faq__item {
+    border-bottom: 0.5px solid $color-black;
+}
+
+.top-faq-question__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 1.025rem;
+    padding: 1.4rem 0 1.4rem 2.1rem;
+    cursor: pointer;
+
+    @include sp {
+        column-gap: 2.1rem;
+        padding: 1.22rem 4.5rem 1.22rem 0;
+    }
+
+    p {
+        width: 80%;
+        font-size: 1.7rem;
+        line-height: lh(30, 17);
+        font-weight: 500;
+
+        @include sp {
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 1.1rem;
+        height: 1.1rem;
+        border-top: solid 1px #222;
+        border-right: solid 1px #222;
+        transform-origin: center;
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%) rotate(135deg);
+        transition: .5s;
+
+        @include sp {
+            right: 1.6rem;
+        }
+    }
+
+    &.active::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.top-faq-question__logo,
+.top-faq-answer__logo {
+    span {
+        color: $color-white;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: bold;
+    }
+}
+
+.top-faq-question__logo {
+    background-color: $color-black;
+    padding: .8rem 1.055rem;
+    border-radius: 50%;
+}
+
+.top-faq__answer {
+    display: none;
+    cursor: pointer;
+}
+
+.top-faq-answer__title {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    color: $color-red;
+    background-color: #CB000019;
+    padding: 1.2rem 0 1.2rem 2.1rem;
+
+    @include sp {
+        column-gap: 2.1rem;
+        padding: 1.15rem 4.5rem 1.15rem 0;
+    }
+
+    p {
+        width: 83%;
+        font-size: 1.7rem;
+        line-height: lh(30, 17);
+        font-weight: bold;
+
+        @include sp {
+            width: 80%;
+            font-size: 1.6rem;
+            line-height: lh(30, 16);
+            font-weight: bold;
+        }
+    }
+}
+
+.top-faq-answer__logo {
+    background-color: $color-red;
+    padding: .8rem 1.135rem;
+    border-radius: 50%;
+}

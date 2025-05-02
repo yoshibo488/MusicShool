@@ -1,0 +1,97 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.top-result {
+    padding-block: 6.4rem 6rem;
+    @include sp {
+        padding-block: 4.6rem 5rem;
+    }
+}
+.top-result__heading {
+    margin-bottom: 3.6rem;
+    text-align: center;
+    @include sp {
+        margin-bottom: 3.9rem;
+    }
+}
+.top-result__contents {
+    position: relative;
+}
+.top-result__item {
+    display: block;
+    margin-inline: 1.8rem;
+    @include sp {
+        margin-inline: 0;
+    }
+    .top-result-card__text,
+    p:nth-last-child(2),
+    p:nth-last-child(3) {
+        font-size: 1.8rem;
+        line-height: lh(30, 18);
+        font-weight: 500;
+    }
+    &:hover .top-result-card__image  {
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+.top-result-card__image {
+    margin-bottom: 1.7rem;
+    overflow: hidden;
+    @include sp {
+        margin-bottom: 2.8rem;
+    }
+    img {
+        transition: .3s;
+        aspect-ratio: 27 / 19;
+        object-fit: cover;
+        @include sp {
+            aspect-ratio: 67 / 40;
+        }
+    }
+}
+.top-result-card__heading {
+    font-size: 2.2rem;
+    line-height: lh(33, 22);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include sp {
+        margin-bottom: .9rem;
+    }
+}
+// 矢印
+.slide-arrow {
+    width: 2.8rem;
+    height: 3.8rem;
+    cursor: pointer;
+}
+.prev-arrow {
+    top: 11rem;
+    left: -2.4rem;
+    position: absolute;
+    z-index: 99;
+    transition: .3s;
+    @include sp {
+        left: .2rem;
+        top: 35.5%;
+        
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.next-arrow {
+    position: absolute;
+    top: 11rem;
+    right: -2.4rem;
+    transition: .3s;
+    @include sp {
+        right: .2rem;
+        top: 35.5%;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}

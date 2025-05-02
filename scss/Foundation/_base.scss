@@ -1,0 +1,110 @@
+@use "../Foundation/variable" as *;
+@use "../Foundation/mixin" as *;
+
+* {
+    box-sizing: border-box;
+    // outline: 1px solid red;
+}
+
+html {
+    font-size: 100%;
+    font-size: 10px;
+
+    // 768~980px
+    @include pc {
+        font-size: calc(10 / 980 * 100vw);
+    }
+
+    // 980px以上
+    @media screen and (min-width: 980px) {
+        font-size: 10px;
+    }
+
+    // 375px以下
+    @media screen and (max-width: 375px) {
+        font-size: calc(10 / 375 * 100vw);
+    }
+}
+
+body {
+    font-family: $font-family;
+    font-weight: 500;
+    padding-top: 8rem;
+
+    @include sp {
+        padding-top: 5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+// =========================
+// レイアウト
+// =========================
+.inner {
+    max-width: 920px;
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+.breadcrumb__inner {
+    max-width: 920px;
+    padding-inline: 2rem;
+    margin: 0 auto;
+    & > span {
+        padding-inline: 1.1rem;
+    }
+    @include sp {
+        & > span:has(.current-item__result) {
+            padding-inline: 0;
+        }
+    }
+}
+
+.header__inner {
+    max-width: 920px;
+    padding-inline: 2rem;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.top-result__inner {
+    max-width: 1000px;
+    padding-inline: 4rem;
+    margin: 0 auto;
+
+    @include sp {
+        max-width: 956px;
+        padding-inline: 2rem;
+    }
+}
+
+.pricing__inner {
+    max-width: 928px;
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+.sub__contents--inner {
+    max-width: 60rem;
+    margin-left: 0;
+
+    @include sp {
+        max-width: 100%;
+    }
+}

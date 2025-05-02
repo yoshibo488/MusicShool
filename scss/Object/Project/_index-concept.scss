@@ -1,0 +1,121 @@
+@use "../../Foundation/variable" as *;
+@use "../../Foundation/mixin" as *;
+
+.top-concept {
+    padding-block: 6.6rem 3.5rem;
+    @include sp {
+        padding: 4.6rem 2rem 1.4rem;
+    }
+}
+.top-concept__contents {
+    text-align: center;
+}
+.top-concept__heading {
+    font-size: 3.5rem;
+    line-height: lh(50, 35);
+    font-weight: bold;
+    color: $color-red;
+    margin-bottom: 1.7rem;
+    @include sp {
+        font-size: 2.5rem;
+        line-height: lh(40, 25);
+        margin-bottom: .7rem;
+    }
+}
+.top-concept__note {
+    font-size: 1.8rem;
+    line-height: lh(30, 18);
+    font-weight: 500;
+    margin-bottom: 3.4rem;
+    @include sp {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+}
+.top-concept__image {
+    width: 90rem;
+    margin: 0 auto 2.052rem;
+    padding-inline: 2rem;
+    @include sp {
+        width: 100%;
+        margin-bottom: 3.4rem;
+        padding-inline: 0;
+    }
+    img {
+        position: relative;
+        z-index: -9999;
+    }
+}
+.top-concept__vison {
+    position: relative;
+    width: 49rem;
+    margin: 0 auto;
+    padding-right: 2.7rem;
+    @include sp {
+        width: 100%;
+        padding-right: 2.1rem;
+    }
+}
+.top-concept-vison__item {
+    display: flex;
+    justify-content: center;
+    column-gap: 8rem;
+    margin-bottom: 1.9rem;
+    span:first-of-type {
+        width: 14.4rem;
+        font-size: 2.5rem;
+        line-height: lh(50, 25);
+        font-weight: bold;
+        color: $color-red;
+        text-align: right;
+        position: relative;
+        display: inline-block;
+        @include sp {
+            font-size: 2rem;
+            line-height: lh(50, 20);
+        }
+        &::before {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            background-color: $color-red;
+            position: absolute;
+            top: 1.9rem;
+            right: -4.9rem;
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            width: .3rem;
+            height: 6.5rem;
+            background-color: $color-red;
+            position: absolute;
+            top: -3rem;
+            right: -4rem;
+        }
+    }
+    span:last-of-type {
+        font-size: 2.3rem;
+        line-height: lh(50, 23);
+        font-weight: 500;
+        width: 11.5rem;
+        text-align: left;
+        @include sp {
+            font-size: 2rem;
+            line-height: lh(50, 20);
+        }
+    }
+}
+.top-concept__triangle {
+    &::before {
+        position: absolute;
+        top: -3.2rem;
+        left: 22.75rem;
+        transform: rotate(180deg);
+        @include sp {
+            left: 50.5%;
+            transform: translateX(-50%) rotate(180deg);
+        }
+    }
+}

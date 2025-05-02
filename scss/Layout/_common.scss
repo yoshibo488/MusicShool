@@ -1,0 +1,314 @@
+@use "../Foundation/variable" as *;
+@use "../Foundation/mixin" as *;
+
+// =========================
+// secondary-fv
+// =========================
+.secondary-fv__contents {
+    position: relative;
+}
+.secondary-fv__image {
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(80, 80, 80, 0.4863);
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    img {
+        object-fit: cover;
+    }
+}
+.secondary-fv__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.secondary-fv__heading {
+    font-size: 2.5rem;
+    line-height: lh(60, 25);
+    font-weight: bold;
+    color: $color-white;
+}
+.secondary-fv__breadcrumb {
+    background-color: $color-gray;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-block: 1.6rem;
+    @include sp {
+        padding-block: 0.55rem;
+        line-height: 1.55;
+    }
+}
+.home {
+    margin-left: -1rem;
+}
+.breadcrumb-item__link {
+    padding-block: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+        opacity: 0.6;
+    }
+    @include sp {
+        padding-block: 0.9rem;
+    }
+}
+.breadcrumb-item-single__link {
+    padding-block: 1.7rem;
+    transition: 0.4s;
+    &:hover {
+        opacity: 0.6;
+    }
+    @include sp {
+        padding-block: 0.8rem;
+    }   
+}
+
+
+//前後記事
+ 
+.post-navigation__arrow {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-details__arrow {
+    column-gap: 7.9rem;
+    margin-bottom: 9.3rem;
+    @include sp {
+        column-gap: 2.2rem;
+        margin-bottom: 6.5rem;
+    }
+}
+.post-navigation-arrow__link {
+    display: block;
+    transition: .3s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.blog-details-arrow__link {
+    width: 26rem;
+    @include sp {
+        width: 15.6rem;
+    }
+}
+.post-navigation-arrow__heading {
+    background-color: $color-black;
+}
+.post-navigation-arrow__previous,
+.post-navigation-arrow__next {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $color-white;
+}
+.post-navigation-arrow__previous {
+    padding: 0.8rem 0 0.8rem 2rem;
+}
+.post-navigation-arrow__next {
+    text-align: right;
+    padding: 0.8rem 1.8rem 0.8rem 0;
+}
+.post-navigation-arrow__content {
+    display: flex;
+    column-gap: 1.6rem;
+    padding-top: 1.6rem;
+    @include sp {
+        display: block;
+        padding-top: 1.5rem;
+    }
+}
+.post-navigation-arrow__image {
+    overflow: hidden;
+    width: 9.8rem;
+    img {
+        aspect-ratio: 49 / 34;
+        object-fit: cover;
+    }
+}
+.post-navigation-arrow__text {
+    flex: 1;
+    font-size: 1.6rem;
+    line-height: lh(25, 16);
+    font-weight: bold;
+}
+
+//関連記事 
+.blog-details__related {
+    @include sp {
+        margin-bottom: 2.8rem;
+    }
+}
+.blog-details-related__link {
+    &:not(:last-of-type) {
+        margin-bottom: 3rem;
+        @include sp {
+            margin-bottom: 1.9rem;
+        }
+    }
+}
+.blog-details-related__thumbnail {
+    width: 20rem;
+    @include sp {
+        width: 16rem;
+    }
+}
+.blog-details-head__tag {
+    min-width: 8rem;
+    @include sp {
+        min-width: 9rem;
+    }
+}
+.blog-details__tag {
+   min-width: 8rem;
+}
+
+.blog-details-related__text {
+    @include sp {
+        margin-top: 0.8rem;
+    }
+}
+
+.post-navigation-related__heading {
+    background-color: $color-black;
+    margin-bottom: 3rem;
+    @include sp {
+        margin-bottom: 2.046em;
+    }
+    span {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $color-white;
+        padding: 1.4rem 0 1.4rem 3rem;
+        @include sp {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+}
+.post-navigation-related__link {
+    display: flex;
+    column-gap: 3rem;
+    transition: .3s;
+    @include sp {
+        column-gap: 2rem;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.post-navigation-related__thumbnail {
+    position: relative;
+}
+.post-navigation-related__image {
+    overflow: hidden;
+    img {
+        aspect-ratio: 10 / 7;
+        object-fit: cover;
+    }
+}
+.post-navigation-related__text {
+    flex: 1;
+    p {
+        &:first-of-type {
+            font-size: 2rem;
+            line-height: lh(25, 20);
+            font-weight: bold;
+            margin-bottom: 1.3rem;
+            @include sp {
+                font-size: 1.7rem;
+                line-height: lh(28, 17);
+                margin-bottom: .4rem;
+            }
+        }
+    }
+    time {
+        font-size: 1.7rem;
+        line-height: lh(30, 17);
+        font-weight: 500;
+        margin-left: .5rem;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+}
+
+// タイトルの文字数制御
+@include sp {
+    .desktop-text { display: none; }
+    .mobile-text { display: inline; }
+}
+
+@include pc {
+    .mobile-text { display: none; }
+    .desktop-text { display: inline; }
+}
+
+// =========================
+// pagination
+// =========================
+
+.pagination01 {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    margin-top: 7rem;
+    @include sp {
+        column-gap: .5rem;
+        margin-top: 5.9rem;
+    }
+}
+
+.page-numbers {
+    display: block;
+    font-size: 1.8rem;
+    line-height: lh(30, 18);
+    font-weight: bold;
+    padding: 0.9rem 1.885rem;
+    text-decoration: none;
+    background-color: $color-white;
+    color: black;
+    border: 1px solid $color-black;
+    transition: .3s;
+    @include sp {
+        padding: 0.7rem 1.642rem;
+        font-size: 1.6rem;
+        line-height: lh(28, 16);
+    }
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+        border: 1px solid $color-black;
+    }
+}
+
+.dots {
+    display: block;
+    padding: .9rem 1.4rem;
+    font-size: 1.8rem;
+    line-height: lh(30, 18);
+    font-weight: bold;
+    border: none;
+    cursor: default;
+    @include sp {
+        padding: 0.6rem;
+    }
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+        border: none;
+    }
+}
+.page-numbers.current {
+    background-color: $color-black;
+    color: $color-white;
+    border: 1px solid $color-black;
+    cursor: default;
+}
