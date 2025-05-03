@@ -31,16 +31,20 @@
                         <img src="<?php echo get_template_directory_uri() ?>/images/top-page/semicircle.jpg" alt="Semicircle">
                     </picture>
                 </div>
-                <ul class="top-concept__vison top-concept-vison">
-                    <li class="top-concept-vison__item">
+                <ul class="top-concept__vision top-concept-vision">
+                    <div class="top-concept-vision__line"></div>
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                    <li class="top-concept-vision__item">
                         <span>Enthusiasm</span>
                         <span>熱狂し</span>
                     </li>
-                    <li class="top-concept-vison__item">
+                    <li class="top-concept-vision__item">
                         <span>Envision</span>
                         <span>想像し</span>
                     </li>
-                    <li class="top-concept-vison__item">
+                    <li class="top-concept-vision__item">
                         <span>Effulgent</span>
                         <span>輝く存在へ</span>
                     </li>
