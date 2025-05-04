@@ -21,7 +21,7 @@
         <?php if( $the_query->have_posts() ):
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
         <a href="<?php echo esc_url(get_the_permalink()); ?>" class="post-navigation-related__link blog-details-related__link">
-            <div class="post-navigation-related__thumbnail blog-details-related__thumbnail">
+            <div class="post-navigation-related__thumbnail blog-details-related__thumbnail <?php if($args['post_type'] == 'result'): echo 'result-details-related__thumbnail'; endif; ?>">
                 <div class="post-navigation-related__image">
                     <?php if (has_post_thumbnail()) : ?>
                         <?php

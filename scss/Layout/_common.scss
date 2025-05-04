@@ -159,6 +159,12 @@
         width: 16rem;
     }
 }
+.result-details-related__thumbnail {
+    width: 26rem;
+    @include sp {
+        width: 16rem;
+    }
+}
 .blog-details-head__tag {
     min-width: 8rem;
     @include sp {
