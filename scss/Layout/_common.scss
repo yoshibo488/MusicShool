@@ -153,6 +153,14 @@
         }
     }
 }
+.result-details-related__links {
+    &:not(:last-of-type) {
+        margin-bottom: 3rem;
+        @include sp {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
 .blog-details-related__thumbnail {
     width: 20rem;
     @include sp {

@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 .prev-arrow {
-    top: 11rem;
+    top: 12.5rem;
     left: -2.4rem;
     position: absolute;
     z-index: 99;
@@ -84,7 +84,7 @@
 }
 .next-arrow {
     position: absolute;
-    top: 11rem;
+    top: 12.5rem;
     right: -2.4rem;
     transition: .3s;
     @include sp {
