@@ -108,9 +108,6 @@
     &:not(:last-of-type) {
         margin-bottom: 1rem;
     }
-    @include sp {
-        padding-left: 2.7rem;
-    }
     input[type="checkbox"] {
         cursor: pointer;
         &::before {
@@ -155,6 +152,9 @@
 .wpcf7-list-item-label {
     cursor: pointer;
     padding: 0 0 0 3.7rem;
+    @include sp {
+        padding-left: 2.5rem;
+    }
 }
 .contact-form__textarea {
     width: 100%;
