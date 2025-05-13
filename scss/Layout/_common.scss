@@ -70,7 +70,6 @@
     }   
 }
 
-
 //前後記事
  
 .post-navigation__arrow {
@@ -305,14 +304,15 @@
 
 .dots {
     display: block;
-    padding: .9rem 1.4rem;
+    height: 100%;
+    padding: 1rem 1.5rem;
     font-size: 1.8rem;
     line-height: lh(30, 18);
     font-weight: bold;
     border: none;
     cursor: default;
     @include sp {
-        padding: 0.6rem;
+        padding: 0.7rem 0.85rem;
     }
     &:hover {
         background-color: $color-white;

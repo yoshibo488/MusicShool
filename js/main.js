@@ -112,4 +112,5 @@ jQuery(function ($) {
         $(this).removeClass('wpcf7-not-valid');
         $(this).closest('.wpcf7-form-control-wrap').find('.wpcf7-not-valid-tip').hide();
     });
+
 });
