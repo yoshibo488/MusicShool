@@ -39,36 +39,37 @@
     background-color: $color-gray;
     font-size: 1.6rem;
     font-weight: 500;
-    padding-block: 1.6rem;
+    // padding-block: 1.6rem;
     @include sp {
-        padding-block: 0.55rem;
         line-height: 1.55;
     }
 }
 .home {
     margin-left: -1rem;
 }
-.breadcrumb-item__link {
-    padding-block: 1.7rem;
+.breadcrumb-item__link,
+.breadcrumb-item-single__link {
+    display: inline-block;
+    padding-block: 1.59rem;
     cursor: pointer;
     transition: 0.4s;
     &:hover {
         opacity: 0.6;
     }
     @include sp {
-        padding-block: 0.9rem;
+        padding-block: 0.5603rem;
     }
 }
-.breadcrumb-item-single__link {
-    padding-block: 1.7rem;
-    transition: 0.4s;
-    &:hover {
-        opacity: 0.6;
-    }
-    @include sp {
-        padding-block: 0.8rem;
-    }   
-}
+// .breadcrumb-item-single__link {
+//     padding-block: 1.7rem;
+//     transition: 0.4s;
+//     &:hover {
+//         opacity: 0.6;
+//     }
+//     @include sp {
+//         padding-block: 0.8rem;
+//     }   
+// }
 
 //前後記事
  
@@ -280,20 +281,23 @@
 }
 
 .page-numbers {
-    display: block;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
     font-size: 1.8rem;
-    line-height: lh(30, 18);
     font-weight: bold;
-    padding: 0.9rem 1.885rem;
+    text-align: center;
     text-decoration: none;
     background-color: $color-white;
-    color: black;
+    color: $color-black;
     border: 1px solid $color-black;
     transition: .3s;
     @include sp {
-        padding: 0.7rem 1.642rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        line-height: 4.4rem;
         font-size: 1.6rem;
-        line-height: lh(28, 16);
     }
     &:hover {
         background-color: $color-black;
@@ -304,15 +308,19 @@
 
 .dots {
     display: block;
-    height: 100%;
-    padding: 1rem 1.5rem;
+    width: 3.7rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
     font-size: 1.8rem;
-    line-height: lh(30, 18);
     font-weight: bold;
     border: none;
     cursor: default;
     @include sp {
-        padding: 0.7rem 0.85rem;
+        width: 3rem;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        font-size: 1.6rem;
     }
     &:hover {
         background-color: $color-white;

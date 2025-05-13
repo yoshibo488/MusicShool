@@ -75,14 +75,8 @@ li {
         display: none;
     }
     & > span {
-        padding-inline: 1.1rem;
+        padding-inline: 1rem;
     }
-
-    // @include sp {
-    //     & > span:has(.current-item__result) {
-    //         padding-inline: 0;
-    //     }
-    // }
 }
 
 .header__inner {
