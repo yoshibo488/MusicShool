@@ -66,14 +66,23 @@ li {
     max-width: 920px;
     padding-inline: 2rem;
     margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     & > span {
         padding-inline: 1.1rem;
     }
-    @include sp {
-        & > span:has(.current-item__result) {
-            padding-inline: 0;
-        }
-    }
+
+    // @include sp {
+    //     & > span:has(.current-item__result) {
+    //         padding-inline: 0;
+    //     }
+    // }
 }
 
 .header__inner {

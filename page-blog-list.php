@@ -79,11 +79,9 @@
                                 <time datetime="<?php echo get_the_time('Y-m-d'); ?>"><?php the_time('Y.m.d') ?></time>
                             </p>
                             <?php
-                            if(mb_strlen($post->post_content)>120) {
-                            $content = mb_substr($post->post_content,0,120); echo $content . '...';
-                            } else {
-                            echo esc_html($post->post_content);
-                            }
+                            $content = apply_filters('the_content', $post->post_content);
+                            $trimmed_content = wp_trim_words( wp_strip_all_tags($content), 120, '...' );
+                            echo '<p>' . esc_html($trimmed_content) . '</p>';
                             ?>
                         </div>
                     </a>

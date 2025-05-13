@@ -80,7 +80,7 @@
 }
 .search__post {
     flex: 1;
-    p:last-child {
+    p:nth-child(4) {
         font-size: 1.8rem;
         line-height: lh(30, 18);
         font-weight: 500;
