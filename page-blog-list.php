@@ -50,7 +50,7 @@
                                         <img src="<?php echo esc_url($desktop[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                                     </picture>
                                 <?php else : ?>
-                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage.jpg'); ?>" alt="<?php echo esc_attr__('noimage'); ?>">
+                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage2.jpg'); ?>" alt="<?php echo esc_attr__('noimage'); ?>">
                                 <?php endif; ?>
                             </div>
                             <?php
