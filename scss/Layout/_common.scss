@@ -39,9 +39,21 @@
     background-color: $color-gray;
     font-size: 1.6rem;
     font-weight: 500;
-    // padding-block: 1.6rem;
     @include sp {
         line-height: 1.55;
+    }
+}
+.breadcrumb__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    & > span {
+    padding-inline: 1rem;
     }
 }
 .home {
@@ -60,19 +72,20 @@
         padding-block: 0.5603rem;
     }
 }
-// .breadcrumb-item-single__link {
-//     padding-block: 1.7rem;
-//     transition: 0.4s;
-//     &:hover {
-//         opacity: 0.6;
-//     }
-//     @include sp {
-//         padding-block: 0.8rem;
-//     }   
-// }
+.current-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; 
+    display: inline-block;
+    vertical-align: middle;
+    // padding-block: 1.59rem;
+    // @include sp {
+    //     padding-block: 0.5603rem;
+    // }
+}
 
 //前後記事
- 
 .post-navigation__arrow {
     display: flex;
     justify-content: space-between;
