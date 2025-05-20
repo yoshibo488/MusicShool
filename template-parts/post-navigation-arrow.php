@@ -18,7 +18,7 @@
                     <?php if(get_the_post_thumbnail_url($prev_post->ID)): ?>
                         <img src="<?php echo get_the_post_thumbnail_url($prev_post->ID); ?>" alt="前の記事">
                     <?php else: ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage.jpg'); ?>" alt="noimage">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage2.jpg'); ?>" alt="noimage">
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -65,7 +65,7 @@
                     <?php if(get_the_post_thumbnail_url($next_post->ID)): ?>
                         <img src="<?php echo get_the_post_thumbnail_url($next_post->ID); ?>" alt="次の記事">
                     <?php else: ?>
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage.jpg'); ?>" alt="noimage">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/noimage2.jpg'); ?>" alt="noimage">
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
