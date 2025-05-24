@@ -113,4 +113,11 @@ jQuery(function ($) {
         $(this).closest('.wpcf7-form-control-wrap').find('.wpcf7-not-valid-tip').hide();
     });
 
+    // PCサイズに戻ったときに、パンくずリストの横スクロール位置をリセットする処理
+    $(window).on('resize', function () {
+        if ($(window).width() >= 768) {
+            $('.breadcrumb__wrapper').scrollLeft(0);
+        }
+    });
+
 });

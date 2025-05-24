@@ -44,16 +44,21 @@
     }
 }
 .breadcrumb__wrapper {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
     & > span {
     padding-inline: 1rem;
+    }
+    @include sp {
+        overflow-x: auto;
+        overflow-y: hidden;
+        text-overflow: clip;
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 }
 .home {
@@ -71,18 +76,6 @@
     @include sp {
         padding-block: 0.5603rem;
     }
-}
-.current-item {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%; 
-    display: inline-block;
-    vertical-align: middle;
-    // padding-block: 1.59rem;
-    // @include sp {
-    //     padding-block: 0.5603rem;
-    // }
 }
 
 //前後記事
